@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>喜来快递云平台</title>
+	</head>
+	<body>
+		<script language="javascript">
+			var hPage;
+			var href = window.location.href;
+			var pos = href.indexOf('/', 10);
+			if(pos > 0){
+				var host = href.substr(0, 1+pos);
+				href = href.substr(1+pos);
+				
+				var prx = '';
+				pos = href.indexOf('/');
+				if(pos > 0){
+					prx = href.substr(0, pos);
+				}
+				if(prx === 'wisdomPark'){
+                  hPage = 'index.html';
+                }
+			}
+			
+			if(hPage){
+				var isAuthed = false;
+				var appPage = '@/' + hPage;
+				
+				var authApps = [];
+				var str = window.sessionStorage.getItem('authApps');
+				if (str) {
+					authApps = JSON.parse(str);
+				}
+
+				for (var i = authApps.length - 1; i >= 0; i--) {
+					if (authApps[i].url === appPage) {
+						isAuthed = true;
+						break
+					}
+				}
+
+				if (!isAuthed) {
+					hPage = 'index.html';
+				}
+				document.location.href = host+hPage+'?href='+encodeURI(href);
+			}
+			else{
+				var hint = '<div id="app" style="width:100%; height:100%">' +
+					'<div style="padding-top:100px;width:300px;margin:0 auto">页面丢了：'+href+'</div>' +
+					'</div>';
+					
+				document.write(hint);
+			}
+		</script>
+	</body>
+</html>

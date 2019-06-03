@@ -1,0 +1,17 @@
+.code-wrap{
+  display: flex;
+  padding-left: 20px;
+  .code-left{
+    padding-top: 20px;
+    flex: 0 0 200px;
+    border-right: 1px solid #ccc;
+    max-width: 250px;
+    overflow: auto;
+  }
+  .code-right{
+    padding-top: 20px;
+    flex-grow: 1;
+    position: relative;
+    overflow: auto;
+  }
+}

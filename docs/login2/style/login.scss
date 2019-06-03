@@ -1,0 +1,113 @@
+.log-wrap {
+    // background-image: url("./wisdomPark-bg.jpg");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 100% 100%;
+    .login-title {
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-240px);
+        // width: 100%;
+        // color: #fff;
+        // font-size: 38px;
+        text-align: center;
+        font-size: 20px;
+        color: #FF9933;
+        line-height: 28px;
+        .word{
+            font-family:'Helvetica-Bold', 'Helvetica Bold', 'Helvetica';
+            font-weight:bold;
+        }
+        .text{
+            font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';
+            font-weight:bold;
+        }
+    }
+    .content-wrap {
+        width: 446px;
+        min-height: 395px;
+        background: #fff;
+        // border: 1px solid #333;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        // transform: translate(-446px, -155px);
+        margin-left: -223px;
+        margin-top:-197.5px;
+        padding: 15px 0;
+        border: none;
+        border-radius: 10px;
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349019607843137);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349019607843137);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349019607843137);
+    }
+    .banner-wrap {
+        float: left;
+        width: 400px;
+        height: 100%;
+        //background: url("./wisdomPark.jpg") center no-repeat;
+    }
+    .inner-wrap {
+        //width: 396px;
+        //margin-left: 50px;
+        .input-wrap {
+            width: 70%;
+            margin: 0 auto;
+        }
+        .login-text {
+            color: #333;
+            font-size: 20px;
+            margin: 15px 0;
+            text-align: center;
+            img{
+                width: 160px;
+                height: 50px;       
+            }
+        }
+    }
+    .login-input {
+        border: 0;
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        &:focus {
+            outline: none;
+            border: 0!important;
+        }
+        .ant-input {
+            border: 0;
+            &:focus {
+                outline: none;
+                border: 0!important;
+            }
+        }
+    }
+    .login-foot{
+        // color:#fff;
+        font-size: 12px;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        bottom:20px;
+        width: 100%;
+    }
+    .form-class {
+        position: absolute;
+        width: 100%;
+    }
+    .ant-alert{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap !important;
+        outline: 0 !important
+    }
+    .login-btn-wrap{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        .btn{
+            width: 100%; 
+            background: #FF9933; 
+            border-color: #FF9933;
+        }
+
+    }
+}
